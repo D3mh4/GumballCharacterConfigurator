@@ -30,3 +30,9 @@ body {
   .Center{
     text-align: center;
   }
+#ClickableBody{
+  width: 1920px;
+  height: 950px;
+  top: 0px;
+  position: absolute;
+}
