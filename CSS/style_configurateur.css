@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 body {
     background-image: url('../Images/Salon.jpg');
@@ -8,22 +8,15 @@ body {
 
   }
 
-#Card h1{
+.Img{
+    width: 100px;
+  }
+  .Img:hover{
+    filter: grayscale(0);
+    cursor: pointer;
+  }
 
-    padding: 1%;
-    background-color: black;
-    width: 1000px;
-    height: 600px;
-    border-radius: 20px;
-    opacity: 85%;
-    margin: auto;
-    margin-top: 10%;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    font-family: Poppins;
-    margin-top: 10%;
-}
-input{ 
-    text-align: center;
-    width: 800px;
-}
+  .Background{
+    background: rgba(0, 0, 0, 0.9);
+  }
+  
