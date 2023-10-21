@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr-ca">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,6 +39,8 @@
   font-size: medium;
   }
 
+  
+
 </style>
 
 <body>
@@ -48,15 +50,18 @@
 
     <form class="w3-container w3-center" action="">
       
-      <input placeholder="Nom du joueur" type="text" class="w3-input w3-border w3-round" required>
+      <input id="Nom-du-joueur"placeholder="Nom du joueur" type="text" class="w3-input w3-border w3-round" required>
       <br>
-      <input placeholder="Description sommaire" type="text" class="w3-input w3-border w3-round" required>
+      <input id="Desciption-sommaire" placeholder="Description sommaire" type="text" class="w3-input w3-border w3-round" required>
       <br>
-      <input placeholder="Courriel" type="email" class="w3-input w3-border w3-round" required>
+      <input id="courriel" placeholder="Courriel" type="email" class="w3-input w3-border w3-round" required>
       <h3>Selectionner un personnage</p>
-      <div >
-
-      <label>
+     
+     
+     
+     
+      <div >     
+        <label>
         <input type="radio" name="personnage" value="Gumball" required>
         <img src="Images/Gumball_logo.png" class="w3-grayscale-max w3-light-grey w3-round-xlarge w3-margin-left Img" alt="Gumball">
       </label>
@@ -75,6 +80,9 @@
         <input type="radio" name="personnage" value="Richard" required>
         <img src="Images/Richard_logo.png" class="w3-grayscale-max w3-light-grey w3-round-xlarge w3-margin-left Img" alt="Richard">
       </label>
+
+
+
 
     </div>
       <h3>Selectionner un objet</p>
@@ -97,13 +105,48 @@
 
     </div>
       <br>
-      <button class="w3-button w3-white w3-round-large w3-display-bottomright w3-margin" >Enregistrer</button>
+      <button class="w3-button w3-white w3-round-large w3-display-bottomright w3-margin"onclick="Validation()" >Enregistrer</button>
       
     </form>
-
+    <div id="resultat"></div>
 
   </div>
 
+  <Script>
+      function Validation() {
 
+      let champNomJoueur = document.getElementById("Nom-du-joueur");
+      let champDescriptionSommaire = document.getElementById("Desciption-sommaire");
+      let champCourriel = document.getElementById("courriel");
+
+      let F_NomJoueur =champNomJoueur.value;
+      let F_Description = champDescriptionSommaire.value;
+      let F_Courriel = champCourriel.value;
+
+
+
+      if (!/^^[A-zÀ-ž0-9\- .!?,'"]+$/.test(F_NomJoueur)) {
+          alert ("Le champ Nom du joueur n'est pa valide ! ");
+          return;
+      }
+
+      if (!/^^[A-zÀ-ž0-9\- .!?,'"]+$/.test(F_Description)) {
+          alert ("Le champ desciption sommaire n'est pas valide! ");
+          return;
+      }
+
+      if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(F_Courriel)) {
+          alert ("Le champ courriel n'est pas valide! ");
+          return;
+      }
+   
+      let divResultat = document.getElementById("resultat");
+      divResultat.innerHTML = chaineResultat;
+
+
+    }
+
+</Script>
+  
 </body>
 </html>
