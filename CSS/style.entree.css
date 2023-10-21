@@ -40,16 +40,21 @@ body {
     background: #59D2EE;
   }
 
-  
-  .text-1 {
-    width: 939px;
-    left: 863px;
-    top: 379px;
-    position: absolute;
-    color: #126C81;
-    font-size: 30px;
-    font-family: Poppins;
-    font-weight: 600;
+  .w3-card-4 {
+    position: relative;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #126C81; 
+    z-index: 1000;
+}
+
+
+.text-1 {
+    color:#126C81; 
+    font-size:15px; 
+    font-family:Poppins; 
+    font-weight:600;
+    padding-top: 10px;  
   }
   
   .text-2 {
@@ -64,32 +69,27 @@ body {
     font-weight: 600; 
   }
   
-  .character-image {
-   width: 412px; 
-   height: 579px; 
-   left: 160px; 
-   top: 402px; 
-   position: absolute; 
-  }
-  
+
+
   .title {
-   left:1050px; 
-   top:124px; 
-   position:absolute; 
    color:#125981; 
-   font-size:70px; 
+   font-size:40px; 
    font-family:'04b'; 
    font-weight:400; 
   }
   
   .email {
-   left:1109px; 
-   top:264px; 
-   position:absolute; 
    color:#126C81; 
-   font-size:30px; 
+   font-size:20px; 
    font-family:Poppins; 
    font-weight:600;  
+  }
+
+.w3-container p{
+    color:#126C81; 
+    font-size:20px; 
+    font-family:Poppins; 
+    font-weight:600;  
   }
   
   .object-box {
