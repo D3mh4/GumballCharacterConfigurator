@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
 body {
     background-image: url('../Images/kitchen.jpg');
     background-repeat: no-repeat;
@@ -27,9 +28,14 @@ body {
     left: 70%;
     transform: translate(-50%, -50%);
     width: 35%;
-
 }
-
+.character-image {
+  width: 412px; 
+  height: 579px; 
+  left: 160px; 
+  top: 300px; 
+  position: absolute; 
+ }
 
   .blue-box {
     width: 1175px;
@@ -69,13 +75,10 @@ body {
     font-weight: 600; 
   }
   
-
-
   .title {
    color:#125981; 
    font-size:40px; 
-   font-family:'04b'; 
-   font-weight:400; 
+   font-family: 'Pixelify Sans', sans-serif;
   }
   
   .email {
