@@ -7,9 +7,15 @@ window.onload = function() {
     document.querySelector(".character_summary").innerText = characterSummary;
     document.querySelector(".email").innerText = characterEmail;
 
- // Retrieving the image path from localStorage
+
  let characterImagePath = localStorage.getItem("selectedCharacterImagePath");
  if (characterImagePath) {
      document.querySelector("[alt='Character_Selected']").src = characterImagePath;
+     document.querySelector("[alt='character-image']").src = characterImagePath;
+ }
+
+ let objectImagePath = localStorage.getItem("selectedObjectImagePath");
+ if (objectImagePath) {
+     document.querySelector("[alt='Object Icon']").src = objectImagePath;
  }
 }

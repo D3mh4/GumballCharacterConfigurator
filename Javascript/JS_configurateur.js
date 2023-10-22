@@ -7,6 +7,18 @@ function Validation() {
     let Radio_Objet = document.getElementsByName("Objet");
     let F_Objet = "";
 
+    var selectedObjectImage = "";
+
+    if (document.querySelector("[name=Objet]:checked").value === "Ciseau") {
+        selectedObjectImage = "Images/Ciseau.png";
+    } else if (document.querySelector("[name=Objet]:checked").value === "BatonDeColle") {
+        selectedObjectImage = "Images/BatonDeColle.png";
+    } else if (document.querySelector("[name=Objet]:checked").value === "SacADos") {
+        selectedObjectImage = "Images/SacADos.jpg";
+    }
+
+    localStorage.setItem("selectedObjectImagePath", selectedObjectImage);
+
     for (let i = 0; i < Radio_Personnage.length; i++) {
         if (Radio_Personnage[i].checked)
             F_Personnage = Radio_Personnage[i].value;
@@ -71,15 +83,21 @@ function Selectionner() {
     document.getElementById("Richard").style.opacity = 0;
 
     var selectedCharacterImage = "";
+    var mainCharacterImage = "";
 
     if (document.querySelector("[name=personnage]:checked").value === "Gumball") {
         selectedCharacterImage = "Images/Gumball.png";
+        mainCharacterImage = "Images/Gumball.png";
     } else if (document.querySelector("[name=personnage]:checked").value === "Darwin") {
         selectedCharacterImage = "Images/Darwin.png";
+        mainCharacterImage = "Images/Darwin.png";
     } else if (document.querySelector("[name=personnage]:checked").value === "Anais") {
         selectedCharacterImage = "Images/Anais.png";
+        mainCharacterImage = "Images/Anais.png";
+        
     } else if (document.querySelector("[name=personnage]:checked").value === "Richard") {
         selectedCharacterImage = "Images/Richard.png";
+        mainCharacterImage = "Images/Richard.png";
     }
 
     localStorage.setItem("selectedCharacterImagePath", selectedCharacterImage);
