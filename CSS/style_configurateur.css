@@ -20,3 +20,34 @@ body {
     background: rgba(0, 0, 0, 0.9);
   }
   
+#Gumball{ 
+width: 20%;
+position: absolute;
+top: 380px;
+left: 40px;
+opacity: 0%;
+}
+
+#Darwin{ 
+  width: 25%;
+  position: absolute;
+  top: 450px;
+  left: 0px;
+  opacity: 0%;
+  }
+
+#Anais{ 
+  width: 20%;
+  position: absolute;
+  top: 450px;
+  right: 40px;
+  opacity: 0%;
+  }
+
+#Richard{ 
+  width: 23%;
+  position: absolute;
+  top: 350px;
+  right: 30px;
+  opacity: 0%;
+  }
