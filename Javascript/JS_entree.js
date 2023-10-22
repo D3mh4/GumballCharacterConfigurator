@@ -7,6 +7,12 @@ window.onload = function() {
     document.querySelector(".character_summary").innerText = characterSummary;
     document.querySelector(".email").innerText = characterEmail;
 
+    let playerNameFromLocalStorage = localStorage.getItem("playerName");
+if (playerNameFromLocalStorage) {
+    document.querySelectorAll("p").forEach(function(pElement) {
+        pElement.textContent = pElement.textContent.replace("Nom du joueur", playerNameFromLocalStorage);
+    });
+}
 
  let characterImagePath = localStorage.getItem("selectedCharacterImagePath");
  if (characterImagePath) {

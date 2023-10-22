@@ -7,6 +7,9 @@ function Validation() {
     let Radio_Objet = document.getElementsByName("Objet");
     let F_Objet = "";
 
+    var playerName = document.getElementById("Nom-du-joueur").value;
+    localStorage.setItem("playerName", playerName);
+    
     var selectedObjectImage = "";
 
     if (document.querySelector("[name=Objet]:checked").value === "Ciseau") {
