@@ -6,6 +6,8 @@
   <title>Configurateur</title>
   <link rel="stylesheet" href="../420-3WE-BB-TP01/CSS/style_configurateur.css">    
   <link rel="stylesheet" href="../420-3WE-BB-TP01/CSS/w3_library.css">
+  <script src="Javascript/JS_configurateur.js"></script>
+  
 </head>
 <style>
 /* HIDE RADIO */
@@ -44,11 +46,21 @@
 </style>
 
 <body>
+
+  <img id="Gumball" src="Images/Gumball.png" alt="">
+
+  <img id="Darwin" src="Images/Darwin.png" alt="">
+
+  <img id="Anais" src="Images/Anais.png" alt="">
+
+  <img id="Richard" src="Images/Richard.png" alt="">
+  
+
   <div class="w3-container  w3-widht w3-display-middle w3-half w3-round-xlarge Background w3-text-white" style="height: 640px;">
 
     <h1 class="h1 w3-center w3-margin">Configuration du personnage</h1>
 
-    <form class="w3-container w3-center" action="">
+    <form class="w3-container w3-center" action="configurateur.html" method="post">
       
       <input id="Nom-du-joueur"placeholder="Nom du joueur" type="text" class="w3-input w3-border w3-round" required>
       <br>
@@ -62,22 +74,22 @@
      
       <div >     
         <label>
-        <input type="radio" name="personnage" value="Gumball" required>
+        <input onclick="Selectionner()" type="radio" name="personnage" value="Gumball" required>
         <img src="Images/Gumball_logo.png" class="w3-grayscale-max w3-light-grey w3-round-xlarge w3-margin-left Img" alt="Gumball">
       </label>
 
       <label>
-        <input type="radio" name="personnage" value="Darwin" required>
+        <input onclick="Selectionner()" id="Darwin" type="radio" name="personnage" value="Darwin" required>
         <img src="Images/Darwin_logo.png" class="w3-grayscale-max w3-light-grey w3-round-xlarge w3-margin-left Img" alt="Darwin">
       </label>
 
       <label>
-        <input type="radio" name="personnage" value="Anais" required>
+        <input onclick="Selectionner()" id="Anais" type="radio" name="personnage" value="Anais" required>
         <img src="Images/Anais_logo.png" class="w3-grayscale-max w3-light-grey w3-round-xlarge w3-margin-left Img" alt="Anais">
       </label>
 
       <label>
-        <input type="radio" name="personnage" value="Richard" required>
+        <input onclick="Selectionner()" id="Richard" type="radio" name="personnage" value="Richard" required>
         <img src="Images/Richard_logo.png" class="w3-grayscale-max w3-light-grey w3-round-xlarge w3-margin-left Img" alt="Richard">
       </label>
 
@@ -105,48 +117,12 @@
 
     </div>
       <br>
-      <button class="w3-button w3-white w3-round-large w3-display-bottomright w3-margin"onclick="Validation()" >Enregistrer</button>
+      <button class="w3-button w3-white w3-round-large w3-display-bottomright w3-margin" onclick="Validation()" >Enregistrer</button>
       
     </form>
-    <div id="resultat"></div>
+  
 
   </div>
 
-  <Script>
-      function Validation() {
-
-      let champNomJoueur = document.getElementById("Nom-du-joueur");
-      let champDescriptionSommaire = document.getElementById("Desciption-sommaire");
-      let champCourriel = document.getElementById("courriel");
-
-      let F_NomJoueur =champNomJoueur.value;
-      let F_Description = champDescriptionSommaire.value;
-      let F_Courriel = champCourriel.value;
-
-
-
-      if (!/^^[A-zÀ-ž0-9\- .!?,'"]+$/.test(F_NomJoueur)) {
-          alert ("Le champ Nom du joueur n'est pa valide ! ");
-          return;
-      }
-
-      if (!/^^[A-zÀ-ž0-9\- .!?,'"]+$/.test(F_Description)) {
-          alert ("Le champ desciption sommaire n'est pas valide! ");
-          return;
-      }
-
-      if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(F_Courriel)) {
-          alert ("Le champ courriel n'est pas valide! ");
-          return;
-      }
-   
-      let divResultat = document.getElementById("resultat");
-      divResultat.innerHTML = chaineResultat;
-
-
-    }
-
-</Script>
-  
 </body>
 </html>
