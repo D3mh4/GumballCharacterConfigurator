@@ -70,6 +70,20 @@ function Selectionner() {
     document.getElementById("Anais").style.opacity = 0;
     document.getElementById("Richard").style.opacity = 0;
 
+    var selectedCharacterImage = "";
+
+    if (document.querySelector("[name=personnage]:checked").value === "Gumball") {
+        selectedCharacterImage = "Images/Gumball.png";
+    } else if (document.querySelector("[name=personnage]:checked").value === "Darwin") {
+        selectedCharacterImage = "Images/Darwin.png";
+    } else if (document.querySelector("[name=personnage]:checked").value === "Anais") {
+        selectedCharacterImage = "Images/Anais.png";
+    } else if (document.querySelector("[name=personnage]:checked").value === "Richard") {
+        selectedCharacterImage = "Images/Richard.png";
+    }
+
+    localStorage.setItem("selectedCharacterImagePath", selectedCharacterImage);
+
     let Radio_Personnage = document.getElementsByName("personnage");
     for (let i = 0; i < Radio_Personnage.length; i++) {
         if (Radio_Personnage[i].checked) {
