@@ -1,109 +1,95 @@
-@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap");
 body {
-    background-image: url('../Images/kitchen.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;  
-    background-size: cover;
-
-  }
-
-  .container {
-    width: 1920px;
-    height: 1080px;
-    position: relative;
-    background: white;
-  }
-  
-  .background-image {
-    width: 2086px;
-    height: 1080px;
-    left: -677px;
-    top: 0px;
-    position: absolute;
-  }
-
-  .w3-card-center {
-    position: absolute;
-    top: 75%;
-    left: 70%;
-    transform: translate(-50%, -50%);
-    width: 35%;
+  background-image: url("../Images/kitchen.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
+
+.container {
+  width: 1920px;
+  height: 1080px;
+  position: relative;
+  background: white;
+}
+
+.background-image {
+  width: 2086px;
+  height: 1080px;
+  left: -677px;
+  top: 0px;
+  position: absolute;
+}
+.blue_background {
+  width: 1175px;
+  height: 1080px;
+  left: 745px;
+  top: 0px;
+  position: absolute;
+  background: #59d2ee;
+}
+
+.w3-card-center {
+  position: absolute;
+  top: 75%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  width: 35%;
+}
+
+.w3-card-4 {
+  position: relative;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #126c81;
+  z-index: 1000;
+}
+
+.w3-container p {
+  color: #126c81;
+  font-size: 20px;
+  font-family: Poppins;
+  font-weight: 600;
+}
+
+.character_name {
+  color: #125981;
+  font-size: 40px;
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+.email {
+  color: #126c81;
+  font-size: 20px;
+  font-family: Poppins;
+  font-weight: 600;
+}
+
 .character-image {
-  width: 412px; 
-  height: 579px; 
-  left: 160px; 
-  top: 300px; 
-  position: absolute; 
- }
-
-  .blue-box {
-    width: 1175px;
-    height: 1080px;
-    left: 745px;
-    top: 0px;
-    position: absolute;
-    background: #59D2EE;
-  }
-
-  .w3-card-4 {
-    position: relative;
-    border-style: solid;
-    border-width: 5px;
-    border-color: #126C81; 
-    z-index: 1000;
+  width: 412px;
+  height: 579px;
+  left: 160px;
+  top: 300px;
+  position: absolute;
 }
 
+.character_summary {
+  color: #126c81;
+  font-size: 15px;
+  font-family: Poppins;
+  font-weight: 600;
+  padding-top: 10px;
+}
 
-.text-1 {
-    color:#126C81; 
-    font-size:15px; 
-    font-family:Poppins; 
-    font-weight:600;
-    padding-top: 10px;  
-  }
-  
-  .text-2 {
-    width: 939px;
-    left: 863px;
-    top: 674px;
-    position: absolute;
-    text-align: center;
-    color: #126C81;
-    font-size: 30px;
-    font-family: Poppins;
-    font-weight: 600; 
-  }
-  
-  .title {
-   color:#125981; 
-   font-size:40px; 
-   font-family: 'Pixelify Sans', sans-serif;
-  }
-  
-  .email {
-   color:#126C81; 
-   font-size:20px; 
-   font-family:Poppins; 
-   font-weight:600;  
-  }
-
-.w3-container p{
-    color:#126C81; 
-    font-size:20px; 
-    font-family:Poppins; 
-    font-weight:600;  
-  }
-  
-  .object-box {
-   width:121px; 
-   height:121px; 
-   left:1272px; 
-   top:834px; 
-   position:absolute; 
-   background:#D9D9D9; 
-   border-radius:16px; 
-   border-width :10px ;  
-   border-color :#126C81 ;  
-   border-style :solid ;  
-  }
+.object-box {
+  width: 121px;
+  height: 121px;
+  left: 1272px;
+  top: 834px;
+  position: absolute;
+  background: #d9d9d9;
+  border-radius: 16px;
+  border-width: 10px;
+  border-color: #126c81;
+  border-style: solid;
+}
