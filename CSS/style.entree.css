@@ -16,10 +16,11 @@ body {
 .background-image {
   width: 2086px;
   height: 1080px;
-  left: -677px;
+  left: -150px;
   top: 0px;
   position: absolute;
 }
+
 .blue_background {
   width: 1175px;
   height: 1080px;
@@ -40,26 +41,23 @@ body {
 .w3-card-4 {
   position: relative;
   border-style: solid;
-  border-width: 5px;
-  border-color: #126c81;
   z-index: 1000;
 }
 
 .w3-container p {
-  color: #126c81;
   font-size: 20px;
   font-family: Poppins;
   font-weight: 600;
 }
 
 .character_name {
-  color: #125981;
+  color: white;
   font-size: 40px;
   font-family: "Pixelify Sans", sans-serif;
 }
 
 .email {
-  color: #126c81;
+  color: white;
   font-size: 20px;
   font-family: Poppins;
   font-weight: 600;
@@ -74,7 +72,7 @@ body {
 }
 
 .character_summary {
-  color: #126c81;
+  color: white;
   font-size: 15px;
   font-family: Poppins;
   font-weight: 600;
@@ -88,8 +86,5 @@ body {
   top: 834px;
   position: absolute;
   background: #d9d9d9;
-  border-radius: 16px;
-  border-width: 10px;
-  border-color: #126c81;
-  border-style: solid;
+
 }
