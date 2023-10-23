@@ -6,12 +6,6 @@ body {
   background-size: cover;
 }
 
-.container {
-  width: 1920px;
-  height: 1080px;
-  position: relative;
-  background: white;
-}
 
 .background-image {
   width: 2086px;
@@ -66,8 +60,8 @@ body {
 .character-image {
 
   height: 579px;
-  left: 160px;
-  top: 300px;
+  left: 350px;
+  top: 350px;
   position: absolute;
 }
 

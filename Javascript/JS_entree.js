@@ -14,10 +14,12 @@ if (playerNameFromLocalStorage) {
     });
 }
 
+ let mainImagePath = localStorage.getItem("mainCharacterImagePath");
  let characterImagePath = localStorage.getItem("selectedCharacterImagePath");
+ 
  if (characterImagePath) {
      document.querySelector("[alt='Character_Selected']").src = characterImagePath;
-     document.querySelector("[alt='character-image']").src = characterImagePath;
+     document.querySelector("[alt='character-image']").src = mainImagePath;
  }
 
  let objectImagePath = localStorage.getItem("selectedObjectImagePath");

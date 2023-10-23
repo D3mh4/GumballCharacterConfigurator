@@ -10,17 +10,6 @@ function Validation() {
     var playerName = document.getElementById("Nom-du-joueur").value;
     localStorage.setItem("playerName", playerName);
     
-    var selectedObjectImage = "";
-
-    if (document.querySelector("[name=Objet]:checked").value === "Ciseau") {
-        selectedObjectImage = "Images/Ciseau.png";
-    } else if (document.querySelector("[name=Objet]:checked").value === "BatonDeColle") {
-        selectedObjectImage = "Images/BatonDeColle.png";
-    } else if (document.querySelector("[name=Objet]:checked").value === "SacADos") {
-        selectedObjectImage = "Images/SacADos.jpg";
-    }
-
-    localStorage.setItem("selectedObjectImagePath", selectedObjectImage);
 
     for (let i = 0; i < Radio_Personnage.length; i++) {
         if (Radio_Personnage[i].checked)
@@ -78,8 +67,23 @@ function Validation() {
         window.location.href = './entree.html';
     }
 }
+function SelectionnerObjet() {
 
-function Selectionner() {
+    var selectedObjectImage = "";
+
+    if (document.querySelector("[name=Objet]:checked").value === "Ciseau") {
+        selectedObjectImage = "Images/Ciseau.png";
+    } else if (document.querySelector("[name=Objet]:checked").value === "BatonDeColle") {
+        selectedObjectImage = "Images/BatonDeColle.png";
+    } else if (document.querySelector("[name=Objet]:checked").value === "SacADos") {
+        selectedObjectImage = "Images/SacADos.jpg";
+    }
+
+    localStorage.setItem("selectedObjectImagePath", selectedObjectImage);
+
+}
+
+function SelectionnerPersonnage() {
     document.getElementById("Gumball").style.opacity = 0;
     document.getElementById("Darwin").style.opacity = 0;
     document.getElementById("Anais").style.opacity = 0;
@@ -87,23 +91,34 @@ function Selectionner() {
 
     var selectedCharacterImage = "";
     var mainCharacterImage = "";
+    
 
     if (document.querySelector("[name=personnage]:checked").value === "Gumball") {
-        selectedCharacterImage = "Images/Gumball.png";
+        selectedCharacterImage = "Images/Gumball_logo.png";
         mainCharacterImage = "Images/Gumball.png";
+        let Gumball = new Audio('audio/Gumball_Audio.Wav');
+        Gumball.play();
     } else if (document.querySelector("[name=personnage]:checked").value === "Darwin") {
-        selectedCharacterImage = "Images/Darwin.png";
+        selectedCharacterImage = "Images/Darwin_logo.png";
         mainCharacterImage = "Images/Darwin.png";
+        let Darwin = new Audio('audio/Darwin_Audio.Wav');
+        Darwin.play();
     } else if (document.querySelector("[name=personnage]:checked").value === "Anais") {
-        selectedCharacterImage = "Images/Anais.png";
+        selectedCharacterImage = "Images/Anais_logo.png";
         mainCharacterImage = "Images/Anais.png";
+        let Anais = new Audio('audio/Anais_Audio.Wav');
+        Anais.play();
         
     } else if (document.querySelector("[name=personnage]:checked").value === "Richard") {
-        selectedCharacterImage = "Images/Richard.png";
+        selectedCharacterImage = "Images/Richard_logo.png";
         mainCharacterImage = "Images/Richard.png";
+        let Richard = new Audio('audio/Richard_Audio.Wav');
+        Richard.play();
+        
     }
 
     localStorage.setItem("selectedCharacterImagePath", selectedCharacterImage);
+    localStorage.setItem("mainCharacterImagePath", mainCharacterImage);
 
     let Radio_Personnage = document.getElementsByName("personnage");
     for (let i = 0; i < Radio_Personnage.length; i++) {
